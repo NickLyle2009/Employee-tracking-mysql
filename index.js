@@ -1,6 +1,9 @@
 const inquire = require('inquire')
 const dbFunction = require('./db/index')
- require('console.table')
+require('console.table')
+const departments = []
+const roles = []
+const employees = []
 
 function Menu() {
     inquire.prompt(
@@ -79,4 +82,41 @@ function Menu() {
 
             }
         })
+    function add_department() {
+        inquire.prompt(
+            {
+                type: 'input',
+                name: 'departmentName',
+                message: 'What is the name of the department?'
+            },
+        ).then((results) =>{
+
+        })
     }
+    function add_role() {
+        inquire.prompt(
+            {
+                type: 'input',
+                name: 'roleName',
+                message: 'What is the name of the role?'
+            },
+            {
+                type: 'input',
+                name: 'roleSalary',
+                message: 'What is the salary?'
+            },
+            {
+                type: 'list',
+                name: 'roleDepartment',
+                message: 'What department does this role belong to?',
+                choices: ['Finance', 'Engineering', 'Sales', 'Legal']
+            },
+            {
+                type: 'list',
+                name: 'role'
+            }
+        ).then((results) =>{
+
+        })
+    }
+}
