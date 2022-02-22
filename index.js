@@ -1,5 +1,5 @@
 const inquire = require('inquire')
-const dbFunction = require('./db/index')
+const db = require('./db')
 require('console.table')
 const departments = ['Finance', 'Engineering', 'Sales', 'Legal']
 const roles = ['Account Manager', 'Accountant', 'Lead Engineer', 'Software Engineer', 'Sales Lead', 'Salesperson', 'Legal Team Lead', 'Lawyer']
@@ -108,10 +108,8 @@ function Menu() {
                 name: 'role'
             }
         ).then((results) =>{
-            addRole(results.roleName);
-            addRole(results.roleSalary);
-            addRole(results.roleDepartment);
-            roles.push(results)
+            db.findAllDepartments().then()
+            
         })
     }
     function add_employee() {
