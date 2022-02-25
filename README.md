@@ -2,8 +2,6 @@
 content manager system, command line to manage company database
 
 
-Pseudocode for Homework 12
-
 1) Start the Github repository
 2) Make sure you have a .gitignore set to Node when you create the Github Repository
 3) Let's start by creating a package.json and downloading all the libraries you need = (Mysql2, Inquirer, console.table) [If you WANT to add express, go for it];
